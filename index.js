@@ -30,7 +30,7 @@ const Card = require('./models/cardModel')
 const app = express()
 
 //Set the PORT variable to either use an env variable or port 5000
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 5500
 
 //Since this is on Heroku lets set trust proxy
 app.set('trust proxy', 1)
@@ -51,8 +51,8 @@ async function libraryCreator() {
   //Connect to database
   await mongoose
     .connect(process.env.MDB_CONNECT, {
-      useNewUrlParser: true,
-      useUnifiedTopology: true,
+      //useNewUrlParser: true,
+      //useUnifiedTopology: true,
     })
     .then(() => {
       console.log('Successfully connected to database')
