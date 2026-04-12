@@ -4,8 +4,7 @@
 services:
   - type: web # valid values: https://render.com/docs/yaml-spec#type
     name: deckmaster
-    env: docker # valid values: https://render.com/docs/yaml-spec#environment
-    dockerfilePath: Dockerfile.render
+    buildCommand: node index.js
     plan: free # optional; defaults to starter
     envVars:
       - key: NODE_ENV # Imported from Heroku app
