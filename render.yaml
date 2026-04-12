@@ -4,6 +4,7 @@
 services:
   - type: web # valid values: https://render.com/docs/yaml-spec#type
     name: deckmaster
+    runtime: node
     buildCommand: npm install
     startCommand: npm start
     plan: free # optional; defaults to starter
